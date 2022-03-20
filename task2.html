@@ -15,37 +15,64 @@
     <body>
         <script>
             
-            let day = window.prompt("Enter day number:")
+            let grade = window.prompt("Enter the grade:")
 
-            switch (day)
+            switch (true)
             {
-                case '1':
-                    document.write("Sunday");
+                case (grade < 50):
+                    document.write("F");
                     break;
                 
-                case '2':
-                    document.write("Monday");
+                case (grade >= 50 && grade <= 52):
+                    document.write("D-");
                     break;
 
-                case '3':
-                    document.write("Tuesday");
+                case (grade >= 53 && grade <= 56):
+                    document.write("D");
                     break;
 
-                case '4':
-                    document.write("Wednesday");
+                case (grade >= 57 && grade <= 59):
+                    document.write("D+");
                     break;
 
-                case '5':
-                    document.write("Thursday");
+                case (grade >= 60 && grade <= 62):
+                    document.write("C-");
                     break;
 
-                case '6':
-                    document.write("Friday");
+                case (grade >= 63 && grade <= 66):
+                    document.write("C");
                     break;
 
-                case '7':
-                    document.write("Saturday");
+                case (grade >= 67 && grade <= 69):
+                    document.write("C+");
                     break;
+
+                    case (grade >= 70 && grade <= 72):
+                    document.write("B-");
+                    break;
+
+                case (grade >= 73 && grade <= 76):
+                    document.write("B");
+                    break;
+
+                case (grade >= 76 && grade <= 69):
+                    document.write("B+");
+                    break;
+
+                    case (grade >= 80 && grade <= 84):
+                    document.write("A-");
+                    break;
+
+                case (grade >= 85 && grade <= 94):
+                    document.write("A");
+                    break;
+
+                case (grade >= 95 && grade <= 100):
+                    document.write("A+");
+                    break;
+
+                default:
+                    document.write("Invalid grade");
             }
         </script>
     </body>
