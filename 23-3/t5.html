@@ -10,32 +10,60 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JavaScript</title>
 
-    <style> </style>
+    <style>
+    span{
+        color: red;
+
+    } 
+    #btn{
+        display: none;
+    }
+    </style>
 </head>
 
 <body>
-    <form>
+    
         <label>Password (min 6 chars)</label>
         <input type="password" class="pass" onchange="checkpass()">
         <span class="err"></span>
         <br><br>
         <label> Retype Password</label>
-        <input type="password" class="pass">
+        <input type="password" class="pass" onchange="checkpass()">
         <span class="err"></span>
-    </form>
+
+        <button type="submit" id="btn" >Submit</button>
+   
     <script>
        
        let p=document.getElementsByClassName('pass');
-       
+       let err = document.getElementsByClassName('err');
+       let btn = document.getElementById('btn');
        function checkpass()
        {
         let p1=p[0].value;
+        let p2=p[1].value;
+
 
            if(p1.length<6)
            {
-               window.alert('ghaida')
+              err[0].innerHTML="Too short";
            }
-       }
+           else {
+            err[0].innerHTML="";  
+           }
+           if(p1 == p2)
+           {
+               err[1].innerHTML="";
+               btn.style.display="block"
+           }
+           else{
+            err[1].innerHTML="password do not match";
+           }
+
+
+           }
+           
+       
     </script>
 </body>
 
