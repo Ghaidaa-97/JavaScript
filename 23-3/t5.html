@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript</title>
+
+    <style> </style>
+</head>
+
+<body>
+    <form>
+        <label>Password (min 6 chars)</label>
+        <input type="password" class="pass" onchange="checkpass()">
+        <span class="err"></span>
+        <br><br>
+        <label> Retype Password</label>
+        <input type="password" class="pass">
+        <span class="err"></span>
+    </form>
+    <script>
+       
+       let p=document.getElementsByClassName('pass');
+       
+       function checkpass()
+       {
+        let p1=p[0].value;
+
+           if(p1.length<6)
+           {
+               window.alert('ghaida')
+           }
+       }
+    </script>
+</body>
+
+</html>

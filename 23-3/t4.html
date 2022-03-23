@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript</title>
+
+    <style>
+        div{
+            border: 1px solid black;
+            padding: 1%;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+<form>
+    <select id="f" onchange="family()">
+        <option hidden>FontFamily</option>
+        <option value="fantasy">fantasy</option>
+        <option value="cursive">cursive</option>
+    </select>
+
+    <select id="s" onchange="siize()" type="number">
+        <option hidden>FontSize</option>
+        <option value="40">40px</option>
+        <option value="60">60px</option>
+    </select>
+
+    <label for="c1">Italic</label>
+    <input type="checkbox" id="c1" onclick="ch()">
+    <label for="c2">Bold</label>
+    <input  id='c2'  type="checkbox" onclick="ch2()">
+    <label for="c3">Underline</label>
+    <input id="c3"  type="checkbox" onclick="ch3()">
+</form>
+<br>
+<div  id="di"> my name is Ghaidaa Obeidat</div>
+    <script>
+        function family()
+        {
+            let result = document.getElementById('f').value;
+            document.getElementById('di').style.fontFamily = result;
+        }
+        function siize()
+        {
+            let result = document.getElementById('s').value;
+            document.getElementById('di').style.fontSize = result+"px";
+        }
+
+        function ch()
+        {
+           let x= document.getElementById("di");
+           if(document.getElementById('c1').checked)
+           {
+               x.style.fontStyle="Italic";
+           }
+           else {
+               x.style.fontStyle="normal";
+            }
+        }
+        let x= document.getElementById("di");
+        function ch2()
+        {
+            let x= document.getElementById("di");
+           if(document.getElementById('c2').checked)
+           {
+               x.style.fontWeight='bold';
+           }
+           else {x.style.fontWeight="normal";}
+        }
+
+        function ch3()
+        {
+            var e = document.getElementById("c3");
+           if(e.checked)
+           {
+               x.style.textDecoration = 'underline';
+           }
+           else {
+               x.style.textDecoration="none";
+            }
+        }
+       
+    </script>
+</body>
+
+</html>

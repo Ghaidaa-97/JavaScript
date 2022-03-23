@@ -15,59 +15,61 @@
     <body>
         <script>
             
-            let grade = window.prompt("Enter the grade:")
+            let grade =window.prompt("Enter the grade:");
+            let a= parseInt(grade);
+            console.log(typeof a);
 
-            switch (true)
+            switch (a)
             {
-                case (grade < 50):
+                case (a < 50):
                     document.write("F");
                     break;
                 
-                case (grade >= 50 && grade <= 52):
+                case (a >= 50 && a <= 52):
                     document.write("D-");
                     break;
 
-                case (grade >= 53 && grade <= 56):
+                case (a >= 53 && a <= 56):
                     document.write("D");
                     break;
 
-                case (grade >= 57 && grade <= 59):
+                case (a >= 57 && a <= 59):
                     document.write("D+");
                     break;
 
-                case (grade >= 60 && grade <= 62):
+                case (a >= 60 && a <= 62):
                     document.write("C-");
                     break;
 
-                case (grade >= 63 && grade <= 66):
+                case (a >= 63 && a <= 66):
                     document.write("C");
                     break;
 
-                case (grade >= 67 && grade <= 69):
+                case (a >= 67 && a <= 69):
                     document.write("C+");
                     break;
 
-                    case (grade >= 70 && grade <= 72):
+                    case (a >= 70 && a <= 72):
                     document.write("B-");
                     break;
 
-                case (grade >= 73 && grade <= 76):
+                case (a >= 73 && a <= 76):
                     document.write("B");
                     break;
 
-                case (grade >= 76 && grade <= 69):
+                case (a >= 76 && a <= 69):
                     document.write("B+");
                     break;
 
-                    case (grade >= 80 && grade <= 84):
+                    case (a >= 80 && a <= 84):
                     document.write("A-");
                     break;
 
-                case (grade >= 85 && grade <= 94):
+                case (a >= 85 && a <= 94):
                     document.write("A");
                     break;
 
-                case (grade >= 95 && grade <= 100):
+                case (a >= 95 && a <= 100):
                     document.write("A+");
                     break;
 

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>
+        
+        </title>
+        <style>
+            div{
+                display:inline-block;
+                background-color: yellow;
+                border: 1px solid black;
+                padding-right:2%;
+                padding-left: 2%;
+                font-size: 50px;
+            }
+        </style>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    </head>
+
+    <body>
+        <div id="d" onmouseover="on(this)" onmouseout="out(this)">
+            Hello World!
+        </div>
+
+        <script>
+            function on(x)
+            {
+                document.getElementById('d').innerHTML='Can I help you?';
+            }
+            function out(x)
+            {
+                document.getElementById('d').innerHTML='Hello World!';
+            }
+        </script>
+    </body>
+    </html>
