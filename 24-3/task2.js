@@ -175,7 +175,7 @@ and return an object that represents how many times each char repeat
 Ex: repeatChar("mamababatetacedo")
 => { m:2,  a:5, b:2, t2:, e:2, c:1, d:1, o:1}
 */
-var sr="abbcccdddd";
+var sr="aabbbbcdddddd";
 
 function repeatChar(s)
 {
@@ -203,3 +203,33 @@ console.log(repeatChar(sr));
 
 //Ex: selectFromObject({a: 1, cat: 3}, ['a', 'cat', 'd'])
 //=>  {a: 1, cat: 3}
+
+/*function selectFromObject(ob , arr)
+{
+  for(i=0 ; i<arr.length ; i++)
+  {
+    if(ob.keys(arr[i]))
+    {
+      
+    }
+    
+  }
+}
+console.log(selectFromObject({a: 1, cat: 3}, ['a', 'cat', 'd']));*/
+
+function selectFromObject(obj , arr){
+  ob = {};
+  for(i = 0; i < arr.length ; i++)
+  {
+
+      for (const [a , b] of Object.entries(obj)) {
+            if(a== arr[i])
+           ob[`${arr[i]}`] = b;
+      
+  }
+}
+
+  return ob;
+
+}
+console.log(selectFromObject({a: 1, cat: 3}, ['a', 'cat', 'd']));
