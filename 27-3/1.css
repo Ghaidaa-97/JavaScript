@@ -1,0 +1,15 @@
+.for{
+    text-align: center;
+    padding: 3%;
+    background-color: rgb(255, 244, 231);
+}
+
+h1{
+    color: rgb(66, 123, 138);
+    font-family:serif;
+}
+
+.card{
+    background-color: azure;
+    border: 2px solid black;
+}
